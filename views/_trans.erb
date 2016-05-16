@@ -1,0 +1,37 @@
+<br>
+<style type="text/css">
+	
+	.transdiv {
+      
+      width: 50%;
+      height: 200px;
+      border: 0px solid black;
+      margin-left: 30%;
+      background-color: #fff;
+
+	}
+
+</style>
+<% @tlate = @translator.translate(params[:userinput], :from => 'en', :to => 'fr'), @translator.translate(params[:userinput], :from => 'en', :to => 'de'), @translator.translate(params[:userinput], :from => 'en', :to => 'ar'), @translator.translate(params[:userinput], :from => 'en', :to => 'zh-CHT') %>
+<div align="center" style="margin-top:10px;">
+	<h4></h4>
+<!-- Nav tabs -->
+  <ul class="nav nav-tabs" role="tablist">
+    <li role="presentation" class="active"><a href="#french" aria-controls="#french" role="tab" data-toggle="tab">French</a></li>
+    <li role="presentation"><a href="#german" aria-controls="#german" role="tab" data-toggle="tab">German</a></li>
+    <li role="presentation"><a href="#arabic" aria-controls="#arabic" role="tab" data-toggle="tab">Arabic</a></li>
+    <li role="presentation"><a href="#chinese" aria-controls="#chinese" role="tab" data-toggle="tab">Chinese (Traditional)</a></li>
+  </ul>
+
+  <div class="tab-content">
+  <br>
+    <div role="tabpanel" class="tab-pane active" id="french"><%= @tlate[0] %><br></div>
+    <div role="tabpanel" class="tab-pane" id="german"><%= @tlate[1] %></div>
+    <div role="tabpanel" class="tab-pane" id="arabic"><%= @tlate[2] %></div>
+    <div role="tabpanel" class="tab-pane" id="chinese"><%= @tlate[3] %></div>
+  </div>
+
+</div>
+
+</div>
+

@@ -1,0 +1,44 @@
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
+
+<!-- Optional theme -->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap-theme.min.css" integrity="sha384-fLW2N01lMqjakBkx3l/M9EahuwpSfeNvV63J5ezn3uZzapT0u7EYsXMjQV+0En5r" crossorigin="anonymous">
+
+<!-- Latest compiled and minified JavaScript -->
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS" crossorigin="anonymous"></script>
+<br>
+<form class="form-horizontal" action="/" method="get">
+<fieldset>
+<!-- Text input-->
+<div class="form-group">
+  <label class="col-md-4 control-label" for="userinput"></label>  
+  <div class="col-md-5">
+  <input id="userinput" name="userinput" type="text" placeholder="Enter Text To translate.." class="form-control input-md">
+    
+  </div>
+
+</div>
+<style type="text/css">
+  
+  .transdiv {
+      
+      width: 500px;
+      height: 200px;
+      border: 1px #6C7A89;
+
+  }
+
+</style>
+<!-- Button -->
+<div class="form-group">
+
+  <br>
+  <label class="col-md-4 control-label" for="submit"></label>
+  <div class="col-md-4">
+    <button id="submit" name="submit" class="btn btn-success">Translate</button>
+  </div>
+
+</div>
+<br>
+
+<br>
+<div class="transdiv"><%= erb(:_trans, :layout => false) %> </div>
